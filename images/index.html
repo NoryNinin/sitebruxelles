@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[REBUILD] - Bruxelles</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="pp.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="pp.png" alt="Logo" class="logo">
+        <h1>[REBUILD] Bruxelles</h1>
+    </header>
+    <main>
+        <section class="server-status">
+            <h2>Statut du serveur Minecraft</h2>
+            <p id="server-status">Chargement...</p>
+            <button onclick="copyServerIP()">Copier l'IP du serveur</button>
+        </section>
+        <section class="discord-status">
+            <h2>Nombre de membres du serveur Discord</h2>
+            <p id="discord-members">Chargement...</p>
+        </section>
+        <section class="about">
+            <h2>À propos du projet</h2>
+            <p>Ce projet vise à reproduire la ville de Bruxelles dans Minecraft. Rejoignez-nous sur notre serveur Discord pour plus d'informations et pour participer au projet.</p>
+            <a href="https://discord.gg/votre-lien-discord" target="_blank">Rejoindre le serveur Discord</a>
+        </section>
+        <section class="spoilers">
+            <h2>Spoilers</h2>
+            <p>Des images et des informations sur les parties de la ville déjà construites.</p>
+        </section>
+        <section class="hierarchy">
+            <h2>Hiérarchie</h2>
+            <p>Informations sur les rôles et les responsabilités des membres du projet.</p>
+        </section>
+    </main>
+    <script>
+        // Exemple de script pour copier l'IP du serveur
+        function copyServerIP() {
+            const serverIP = "votre.ip.serveur";
+            navigator.clipboard.writeText(serverIP).then(() => {
+                alert("IP du serveur copiée !");
+            });
+        }
+
+        // Exemple de script pour mettre à jour le statut du serveur et le nombre de membres Discord
+        document.addEventListener("DOMContentLoaded", () => {
+            // Remplacer par votre logique pour obtenir le statut du serveur
+            document.getElementById("server-status").innerText = "En ligne";
+
+            // Remplacer par votre logique pour obtenir le nombre de membres Discord
+            document.getElementById("discord-members").innerText = "123 membres";
+        });
+    </script>
+</body>
+</html>
